@@ -24,7 +24,7 @@
 	<parent>
 		<groupId>org.infrastructurebuilder</groupId>
 		<artifactId>ibparent</artifactId>
-		<version>101</version>
+		<version>102-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>ibcore-object-mapper-jackson</artifactId>
@@ -39,8 +39,8 @@
 	<!-- I see no way to increase this at the moment -->
 	<properties>
 		<surefire.failIfNoTests>false</surefire.failIfNoTests>
-		<test.coverage.percentage.required>0</test.coverage.percentage.required>
-		<jacoco.max.missed.classes>99</jacoco.max.missed.classes>
+		<test.coverage.percentage.required>100</test.coverage.percentage.required>
+		<jacoco.max.missed.classes>0</jacoco.max.missed.classes>
 		<ib.exceptions.version>101-SNAPSHOT</ib.exceptions.version>
 	</properties>
 
@@ -83,7 +83,11 @@
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
-			<scope>test</scope>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
 		</dependency>
 	</dependencies>
 
