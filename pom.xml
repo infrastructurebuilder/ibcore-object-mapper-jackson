@@ -36,8 +36,18 @@
 	<!-- URL for site gen -->
 	<url>${github.url.base}/${project.artifactId}</url>
 
+	<scm>
+		<connection>scm:git:${git.url}</connection>
+		<url>${git.scm.url}</url>
+		<developerConnection>scm:git:${git.url}</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+
 	<!-- I see no way to increase this at the moment -->
 	<properties>
+		<git.url.base>git@github.com:${team.group.id}</git.url.base>
+		<git.url>${git.url.base}/${project.artifactId}.git</git.url>
 		<surefire.failIfNoTests>false</surefire.failIfNoTests>
 		<test.coverage.percentage.required>100</test.coverage.percentage.required>
 		<jacoco.max.missed.classes>0</jacoco.max.missed.classes>
