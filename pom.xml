@@ -28,7 +28,7 @@
 	</parent>
 
 	<artifactId>ibcore-object-mapper-jackson</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>${project.artifactId}</name>
@@ -40,7 +40,7 @@
 		<connection>scm:git:${git.url}</connection>
 		<url>${git.scm.url}</url>
 		<developerConnection>scm:git:${git.url}</developerConnection>
-		<tag>ibcore-object-mapper-jackson-1.0.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 
