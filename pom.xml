@@ -43,7 +43,6 @@
 		<tag>HEAD</tag>
 	</scm>
 
-
 	<!-- I see no way to increase this at the moment -->
 	<properties>
 		<git.url.base>git@github.com:${team.group.id}</git.url.base>
