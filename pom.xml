@@ -24,7 +24,7 @@
 	<parent>
 		<groupId>org.infrastructurebuilder</groupId>
 		<artifactId>ibparent</artifactId>
-		<version>102-SNAPSHOT</version>
+		<version>103</version>
 	</parent>
 
 	<artifactId>ibcore-object-mapper-jackson</artifactId>
@@ -41,7 +41,7 @@
 		<surefire.failIfNoTests>false</surefire.failIfNoTests>
 		<test.coverage.percentage.required>100</test.coverage.percentage.required>
 		<jacoco.max.missed.classes>0</jacoco.max.missed.classes>
-		<ib.exceptions.version>101-SNAPSHOT</ib.exceptions.version>
+		<ib.exceptions.version>103</ib.exceptions.version>
 	</properties>
 
 	<dependencies>
