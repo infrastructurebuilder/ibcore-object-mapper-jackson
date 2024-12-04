@@ -20,7 +20,6 @@ package org.infrastructurebuilder.objectmapper.jackson;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
