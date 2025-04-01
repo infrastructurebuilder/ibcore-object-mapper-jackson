@@ -24,7 +24,7 @@
 	<parent>
 		<groupId>org.infrastructurebuilder</groupId>
 		<artifactId>ibparent</artifactId>
-		<version>104</version>
+		<version>106</version>
 	</parent>
 
 	<artifactId>ibcore-object-mapper-jackson</artifactId>
