@@ -18,99 +18,103 @@
     @formatter:on
 
 -->
-<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.infrastructurebuilder</groupId>
-		<artifactId>ibparent</artifactId>
-		<version>106</version>
-	</parent>
+  <parent>
+    <groupId>org.infrastructurebuilder</groupId>
+    <artifactId>ibparent</artifactId>
+    <version>108</version>
+  </parent>
 
-	<artifactId>ibcore-object-mapper-jackson</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
-	<packaging>jar</packaging>
+  <artifactId>ibcore-object-mapper-jackson</artifactId>
+  <version>1.0.2-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
-	<name>${project.artifactId}</name>
-	<description>Jackson Object Mapper for IBCore (mostly for jsonschema)</description>
-	<!-- URL for site gen -->
-	<url>${github.url.base}/${project.artifactId}</url>
+  <name>${project.artifactId}</name>
+  <description>Jackson Object Mapper for IBCore (mostly for jsonschema)</description>
+  <!-- URL for site gen -->
+  <url>${github.url.base}/${project.artifactId}</url>
 
-	<scm>
-		<connection>scm:git:${git.url}</connection>
-		<url>${git.scm.url}</url>
-		<developerConnection>scm:git:${git.url}</developerConnection>
-		<tag>HEAD</tag>
-	</scm>
+  <scm>
+    <connection>scm:git:${git.url}</connection>
+    <url>${git.scm.url}</url>
+    <developerConnection>scm:git:${git.url}</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
 
-	<!-- I see no way to increase this at the moment -->
-	<properties>
-		<git.url.base>git@github.com:${team.group.id}</git.url.base>
-		<git.url>${git.url.base}/${project.artifactId}.git</git.url>
-		<surefire.failIfNoTests>false</surefire.failIfNoTests>
-		<test.coverage.percentage.required>100</test.coverage.percentage.required>
-		<jacoco.max.missed.classes>0</jacoco.max.missed.classes>
-	</properties>
+  <!-- I see no way to increase this at the moment -->
+  <properties>
+    <git.url.base>git@github.com:${team.group.id}</git.url.base>
+    <git.url>${git.url.base}/${project.artifactId}.git</git.url>
+    <surefire.failIfNoTests>false</surefire.failIfNoTests>
+    <test.coverage.percentage.required>100</test.coverage.percentage.required>
+    <jacoco.max.missed.classes>0</jacoco.max.missed.classes>
+  </properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>io.avaje</groupId>
-			<artifactId>javax.inject</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.avaje</groupId>
-			<artifactId>avaje-jsr305</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.datatype</groupId>
-			<artifactId>jackson-datatype-jsr310</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.datatype</groupId>
-			<artifactId>jackson-datatype-jdk8</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-		</dependency>
-	</dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>io.avaje</groupId>
+      <artifactId>javax.inject</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.avaje</groupId>
+      <artifactId>avaje-jsr305</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-jsr310</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-jdk8</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.infrastructurebuilder</groupId>
+      <artifactId>ibexceptions</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+  </dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifestEntries>
-							<Automatic-Module-Name>${project.groupId}.objectmapper.jackson</Automatic-Module-Name>
-						</manifestEntries>
-					</archive>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.eclipse.sisu</groupId>
-				<artifactId>sisu-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Automatic-Module-Name>${project.groupId}.objectmapper.jackson</Automatic-Module-Name>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.sisu</groupId>
+        <artifactId>sisu-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 </project>
